@@ -5,8 +5,6 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import List from './composants/List.jsx'
 import NewTask from './composants/NewTask.jsx'
-import KADEA from './composants/kadea.jsx'
-import About from './composants/About.jsx'
 
 
 const router = createBrowserRouter(
@@ -26,17 +24,6 @@ const router = createBrowserRouter(
         }
       ]
     },
-    {
-      path: '/Bokanga',
-      element: <KADEA />,
-      children: [
-        {
-          path:"",
-          element:<About/>
-        }
-      ]
-    }
-    
   ]
 );
 ReactDOM.createRoot(document.getElementById('root')).render(

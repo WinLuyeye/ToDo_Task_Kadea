@@ -4,8 +4,6 @@ function About() {
   return (
     <div>
         <div>About</div>
-    
-    <Link to={"/"}>Accueil</Link>
     </div>
     
   )
