@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import List from './composants/List.jsx'
 import NewTask from './composants/NewTask.jsx'
+import Team from './composants/Team.jsx'
 
 
 const router = createBrowserRouter(
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
         }
       ]
     },
+    {
+      path:"/team",
+      element: <Team />,
+    }
   ]
 );
 ReactDOM.createRoot(document.getElementById('root')).render(

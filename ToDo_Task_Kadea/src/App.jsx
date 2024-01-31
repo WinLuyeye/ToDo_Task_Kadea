@@ -9,10 +9,10 @@ export const lists = createContext();
 
 
 function App() {
-  const [newList,setNewList ]= useState(tasks);
+  const [taskList, handleTasks ]= useState(tasks);
   return (
     <div>
-      <lists.Provider value={{newList, setNewList}}>
+      <lists.Provider value={{taskList, handleTasks}}>
         <Outlet />
       </lists.Provider> 
     </div>
