@@ -22,7 +22,7 @@ function NewTask() {
     const newTodo = { title, completed: false, userId : 1 };
     // handleTasks([newTodo, ...taskList]);
     axios.post('https://jsonplaceholder.typicode.com/todos', newTodo)
-         .then((response) => console.log(response)) 
+         .then((response) => handleTasks([response.data, ...taskList])) 
     navigate("/");
   };
   return (
