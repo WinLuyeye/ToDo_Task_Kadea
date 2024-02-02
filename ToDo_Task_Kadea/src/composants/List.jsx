@@ -10,16 +10,16 @@ function List() {
     navigate("/newtask")
   }  
 
-  const sortLists = taskList.sort(function(a, b) {
-    return a.name > b.name;
-  });
-  console.log(sortLists);
+  // const sortLists = taskList.sort(function(a, b) {
+  //   return a.name > b.name;
+  // });
+  // console.log(sortLists);
   return (
     <main className="flex w-full bg-white h-[90vh]">
         <aside className="bg-white w-1/3 py-[20px] flex justify-between flex-col">
             <h2>Tasks</h2>
             <div>
-              {taskList.map((list,id)=><p key={id}>{list.name}</p>)}
+              {taskList?.length && taskList.map((list,id)=><p key={id}>{list.name}</p>)}
             </div>
             <div>
                <button onClick={handleClick} className="bg-green-400 py-4 px-6 rounded-lg text-white">Create New Task</button>
