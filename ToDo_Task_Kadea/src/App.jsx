@@ -2,14 +2,14 @@
 import { Children, createContext, useState } from 'react'
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import tasks from "./models/Tasks.json";
+// import tasks from "./models/Tasks.json";
 
 export const lists = createContext();
 
 
 
 function App() {
-  const [taskList, handleTasks ]= useState(tasks);
+  const [taskList, handleTasks ]= useState();
   return (
     <div>
       <lists.Provider value={{taskList, handleTasks}}>
