@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { lists } from "../App";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function NewTask() {
   const {
@@ -18,8 +19,10 @@ function NewTask() {
   };
 
   const handleAddTask = ({ title }) => {
-    const newTodo = { name: title, description: [] };
-    handleTasks([newTodo, ...taskList]);
+    const newTodo = { title, completed: false, userId : 1 };
+    // handleTasks([newTodo, ...taskList]);
+    axios.post('https://jsonplaceholder.typicode.com/todos', newTodo)
+         .then((response) => console.log(response)) 
     navigate("/");
   };
   return (
