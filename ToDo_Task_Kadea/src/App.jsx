@@ -12,10 +12,11 @@ export const lists = createContext();
 function App() {
   const [taskList, handleTasks ]= useState();
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/todos')
+    axios.get('https://jsonplaceholder.typicode.com/users/1/todos')
         .then((response) => {
-          handleTasks(response.data)
+          handleTasks(response.data);
         })
+
         
   }, [])
   return (

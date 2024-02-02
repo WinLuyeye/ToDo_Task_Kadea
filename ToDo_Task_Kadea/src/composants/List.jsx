@@ -19,7 +19,7 @@ function List() {
         <aside className="bg-white w-1/3 py-[20px] flex justify-between flex-col">
             <h2>Tasks</h2>
             <div>
-              {taskList?.length && taskList.map((list,id)=><p key={id}>{list.name}</p>)}
+              {taskList?.length && taskList.map((list)=><p key={list.id}>{list.title}</p>)}
             </div>
             <div>
                <button onClick={handleClick} className="bg-green-400 py-4 px-6 rounded-lg text-white">Create New Task</button>
